@@ -186,12 +186,12 @@ namespace ProbeControlRoom
 				FlightCamera.fetch.EnableCamera ();
 				FlightCamera.fetch.DeactivateUpdate ();
 				FlightCamera.fetch.gameObject.SetActive (true);
-				FlightEVA.fetch.DisableInterface ();
+				CrewHatchController.fetch.DisableInterface ();
 
 				InternalCamera.Instance.SetTransform(actualTransform, true);
 
 				InternalCamera.Instance.EnableCamera ();
-				FlightGlobals.ActiveVessel.SetActiveInternalPart (p.internalModel.part);
+				FlightGlobals.ActiveVessel.SetActiveInternalSpace (p.internalModel.part);
 
 				IVASun sunBehaviour;
 				sunBehaviour = (IVASun)FindObjectOfType(typeof(IVASun));
